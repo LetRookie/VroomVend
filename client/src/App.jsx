@@ -16,7 +16,7 @@ function App() {
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i className="fa fa-bars"></i>
                   </button>
-                  <a className="navbar-brand" href="index.html">carvilla<span></span></a>
+                  <a className="navbar-brand" href="index.html"><span>VroomVend</span></a>
 
                 </div>
 
