@@ -1,0 +1,37 @@
+{
+    "3564027f-adcd-4425-b2c0-1253d2386c0c": {
+        "make": "Opel",
+        "model": "Insignia",
+        "HorsePower": "130",
+        "imageUrl": "https://cdn3.focus.bg/autodata/i/opel/insignia/insignia-sports-tourer/large/a7c1554987be9195a9564c25e738ea23.jpg",
+        "year": "2008",
+        "motorType": "disel",
+        "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
+    },
+    "c64db398-91cd-487c-b900-86058c0422f8": {
+        "make": "Audi",
+        "model": "RS4",
+        "HorsePower": "450",
+        "imageUrl": "https://cdn3.focus.bg/autodata/i/audi/rs4/rs4-b8/medium/c306561ccaa4cd976faa2da9c6b7d92c.jpg",
+        "year": "2012",
+        "motorType": "disel",
+        "_id": "c64db398-91cd-487c-b900-86058c0422f8"
+    },
+    "daf55cd4-9aa1-4b7a-82a9-fbdb74aaa84b": {
+        "title": "asdasd",
+        "category": "asdasd",
+        "maxLevel": "1213",
+        "imageUrl": "https://img.freepik.com/free-vector/joystick-game-sport-technology_138676-2045.jpg?w=2000",
+        "summary": "asdasdasd",
+        "_id": "daf55cd4-9aa1-4b7a-82a9-fbdb74aaa84b"
+    },
+    "18bfdb21-333b-42bd-a32c-c114263f2569": {
+        "make": "BMW",
+        "model": "M3",
+        "HorsePower": "431",
+        "imageUrl": "https://cdn3.focus.bg/autodata/i/bmw/m3/bmw-v-f80/medium/d6f9727a89ff6ecf6c3bb82de31a1934.jpg",
+        "year": "2013",
+        "motorType": "disel",
+        "_id": "18bfdb21-333b-42bd-a32c-c114263f2569"
+    }
+}
