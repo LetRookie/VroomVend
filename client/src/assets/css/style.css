@@ -210,7 +210,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff6600;}
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background:url(../images/welcome-hero/welcome-banner.jpg)no-repeat;
+    background:url(../images/welcome-hero/banner-image.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 1;
@@ -222,43 +222,30 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff6600;}
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(42,45,84,.60);
+    background: rgba(65, 64, 64, 0.6);
 }
 .header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
 
 /*.welcome-hero-txt*/
-.welcome-hero-txt{text-align: center;padding:290px 0 372px;}
+.welcome-hero-txt{text-align: center; padding:290px 0 372px;}
 .welcome-hero-txt h2 {
     font-size: 42px;
-    color: #fff;
+    color: #000;
+    -webkit-text-stroke: 3px #fff;;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 45px;
 }
 .welcome-hero-txt p {
+    padding: 5px;
     font-size: 18px;
+    background: #fff;
+    border-radius: 25px;
     text-transform: initial;
-    color: #fff;
+    color: #000;
     font-weight: 500;
     max-width: 735px;
     margin: 0 auto;
-}
-.welcome-btn {
-    display: inline-block;
-    width: 230px;
-    height: 60px;
-    background: #4e4ffa;
-    color: #fff;
-    border-radius: 3px;
-    margin-top: 55px;
-    -webkit-transition: .3s linear; 
-    -moz-transition:.3s linear; 
-    -ms-transition:.3s linear; 
-    -o-transition:.3s linear;
-    transition: .3s linear;
-}
-.welcome-btn:hover{
-    background: #0102fa;
 }
 /*.welcome-hero-txt*/
 
