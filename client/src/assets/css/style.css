@@ -163,8 +163,12 @@ nav.navbar.bootsnav ul.nav > li > a {
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
+nav.navbar.bootsnav ul.nav > li:last-child{
+    background-color: #ff6600;
+    border-radius: 1em;
+}
 nav.navbar.bootsnav ul.nav > li > a {padding: 48px 21px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color:#ff6600;}
+/* nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color:#ff6600;} */
 nav.navbar.bootsnav ul.nav > li.active>a {color: #ff6600;}
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
@@ -193,7 +197,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 /*.navbar-toggle */
 nav.navbar.bootsnav .navbar-toggle {
     position: relative;
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid #ff6600;
     padding: 10px;
     top: 0;

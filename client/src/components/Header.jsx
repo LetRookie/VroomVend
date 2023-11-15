@@ -16,12 +16,11 @@ export default function Header () {
 
               <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                 <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                  <li className=" scroll active"><a href="#home">home</a></li>
-                  <li className="scroll"><a href="#service">service</a></li>
-                  <li className="scroll"><a href="#featured-cars">featured cars</a></li>
-                  <li className="scroll"><a href="#new-cars">new cars</a></li>
-                  <li className="scroll"><a href="#brand">brands</a></li>
-                  <li className="scroll"><a href="#contact">contact</a></li>
+                  <li className=" scroll"><a href="#home">home</a></li>
+                  <li className="scroll"><a href="#service">buy</a></li>
+                  <li className="scroll"><a href="#featured-cars">sell</a></li>
+                  <li className="scroll"><a href="#contact">about</a></li>
+                  <li className="scroll"><a href="#contact">sign up</a></li>
                 </ul>
               </div>
             </div>
