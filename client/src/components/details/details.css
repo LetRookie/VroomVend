@@ -1,0 +1,206 @@
+/*==================
+    Base Styles
+===================*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+} 
+
+.slide-wrapper input[type="radio"] {
+  display: none;
+}
+
+.slide-wrapper  .container {
+  background: rgb(255, 255, 255);
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 2em;
+}
+
+.slide-wrapper  .slide-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 3em;
+  width: 40%;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px 0px rgb(53, 53, 53);
+  overflow: hidden;
+}
+
+/*==================
+  Slides
+===================*/
+
+.slide-wrapper  #slide-role {
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  z-index: 100;
+  transition: left .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* flex */
+  display: flex;
+}
+
+.slide-wrapper .slide {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* backgrounds */
+
+.slide-wrapper .slide-1 {
+  background-image: url("https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+
+.slide-wrapper .slide-2 {
+  background-image: url("https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+
+.slide-wrapper .slide-3 {
+  background-image: url("https://images.pexels.com/photos/448714/pexels-photo-448714.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+
+.slide-wrapper .slide-4 {
+  background-image: url("https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+
+/*===================
+  BUTTONS
+====================*/
+
+.btn,
+.btn::after {
+  border-radius: 50%;
+  transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.281);
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 2px 2px rgba(56, 56, 56, 0.822);
+  position: absolute;
+  bottom: 12%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transform: scale(1.1);
+  z-index: 1000;
+}
+
+.btn:nth-of-type(1) {
+  left: 38%;
+}
+
+.btn:nth-of-type(2) {
+  left: 45%;
+}
+
+.btn:nth-of-type(3) {
+  left: 52%;
+}
+
+.btn:nth-of-type(4) {
+  left: 59%;
+}
+
+.btn:hover {
+  transform: scale(1.4);
+}
+
+/* buttons Atom! */
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  border: 1px solid white;
+  background: rgb(11, 185, 238);
+  width: 20px;
+  height: 20px;
+  margin: 3px 3px;
+  transform: scale(.5, .5);
+  box-shadow: 0px 1px 5px rgba(56, 56, 56, 0.822);
+}
+
+/*====================
+      L O G I C 
+===================*/
+
+/* slide logic */
+
+input[type="radio"]:checked#slide-2-trigger~div.slide-wrapper>div#slide-role {
+  left: -100%;
+}
+
+input[type="radio"]:checked#slide-3-trigger~div.slide-wrapper>div#slide-role {
+  left: -200%;
+}
+
+input[type="radio"]:checked#slide-4-trigger~div.slide-wrapper>div#slide-role {
+  left: -300%;
+}
+
+/* button logic */
+
+input[type="radio"]:checked+label.btn {
+  transform: scale(1.2);
+  border: 1px solid rgba(53, 53, 53, 0.308);
+}
+
+input[type="radio"]:checked+label.btn::after {
+  transform: scale(1.1, 1.1);
+  background: lightskyblue;
+}
+
+/*=====================================================================================
+              MEDIA QUERIES
+=======================================================================================*/
+
+@media only screen and (max-width: 750px) {
+  .slide-wrapper {
+      width: 90%;
+      height: 100%;
+  }
+  .btn:nth-of-type(1) {
+      left: 93%;
+      bottom: 60%;
+  }
+  .btn:nth-of-type(2) {
+      left: 93%;
+      bottom: 50%;
+  }
+  .btn:nth-of-type(3) {
+      left: 93%;
+      bottom: 40%;
+  }
+  .btn:nth-of-type(4) {
+      left: 93%;
+      bottom: 30%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .btn:nth-of-type(1) {
+      left: 91%;
+  }
+  .btn:nth-of-type(2) {
+      left: 91%;
+  }
+  .btn:nth-of-type(3) {
+      left: 91%;
+  }
+  .btn:nth-of-type(4) {
+      left: 91%;
+  }
+}

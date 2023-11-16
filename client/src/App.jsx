@@ -5,6 +5,7 @@ import Home from "./components/home/Home"
 import Footer from "./components/footer/Footer"
 import FeaturedCars from "./components/featured-cars/FeaturedCars"
 import Catalog from "./components/catalog-page/Catalog"
+import Details from "./components/details/Details"
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
       {/* <Routes>
         <Route path="/" element={<Home />} />
       </Routes> */}
-      <Catalog />
+      
+      <Details />
       
       <Footer />
 
