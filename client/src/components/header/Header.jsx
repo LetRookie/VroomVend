@@ -13,16 +13,16 @@ export default function Header (){
     
             <li><a href="/">Home</a></li>
             <li><a href="/">Buy</a></li>
+            <li><a href="/">Sell</a></li>
             <li><a href="/">Login</a></li>
-            <li><a href="/reg-form.html">Sign up</a></li>
+            <li><a href="/">Logout</a></li>
+            <li><a href="/">Sign up</a></li>
           </div>
         </ul>
       </nav>
     
 
-      <div className="parallax">
-        <p>Pick the car which suits you best</p>
-      </div>
+
     </>
     )
 }
