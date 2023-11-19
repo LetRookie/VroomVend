@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import './assets/styles/styles.css'
 import Home from "./components/home/Home"
 import LastAdded from "./components/last-added/LastAdded"
+import Footer from "./components/footer/Footer"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
     <Home />
     <LastAdded />
+    <Footer/>
     </>
   )
 }
