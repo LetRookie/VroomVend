@@ -1,27 +1,15 @@
 import { Routes, Route } from "react-router-dom"
-
-import Header from "./components/header/Header"
+import './assets/styles/styles.css'
 import Home from "./components/home/Home"
-import Footer from "./components/footer/Footer"
-import FeaturedCars from "./components/featured-cars/FeaturedCars"
-import Catalog from "./components/catalog-page/Catalog"
-import Details from "./components/details/Details"
+import LastAdded from "./components/last-added/LastAdded"
+
 
 function App() {
 
   return (
     <>
-    <Header />
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes> */}
-      
-      <Details />
-      
-      <Footer />
-
-
-
+    <Home />
+    <LastAdded />
     </>
   )
 }

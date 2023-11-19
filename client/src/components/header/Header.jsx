@@ -1,34 +1,28 @@
-export default function Header () {
-    return (
-        <div className="top-area">
-        <div className="header-area">
-          <nav className="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+export default function Header (){
+    return(
+        <>
+        <nav className="navbar">
 
-            <div className="container">
+        <div className="logo"><img src="/vroom-logo.svg" alt="" /></div>
+    
 
-              <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                  <i className="fa fa-bars"></i>
-                </button>
-                <a className="navbar-brand" href="index.html"><span><img src="/vroom-logo.svg" alt="" /></span></a>
+        <ul className="nav-links">
+    
 
-              </div>
+          <div className="menu">
+    
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Buy</a></li>
+            <li><a href="/">Login</a></li>
+            <li><a href="/reg-form.html">Sign up</a></li>
+          </div>
+        </ul>
+      </nav>
+    
 
-              <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                  <li className=" scroll guest"><a href="#home">home</a></li>
-                  <li className="scroll guest"><a href="#service">buy</a></li>
-                  <li className="scroll user"><a href="#featured-cars">sell</a></li>
-                  <li className="scroll"><a href="#contact">about</a></li>
-                  <li className="scroll"><a href="#contact">sign up</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-        </div>
-        <div className="clearfix"></div>
-
+      <div className="parallax">
+        <p>Pick the car which suits you best</p>
       </div>
+    </>
     )
 }
