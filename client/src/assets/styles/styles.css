@@ -60,6 +60,13 @@
     padding: 5px 14px;
   }
 
+  .menu li:last-child{
+    background: #000;
+  }
+  .menu li:last-child:hover{
+    background: #ff6600;
+  }
+
   /* DROPDOWN MENU */
   .services {
     position: relative;

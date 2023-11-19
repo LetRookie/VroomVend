@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header (){
     return(
         <>
@@ -11,12 +13,12 @@ export default function Header (){
 
           <div className="menu">
     
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Buy</a></li>
-            <li><a href="/">Sell</a></li>
-            <li><a href="/">Login</a></li>
-            <li><a href="/">Logout</a></li>
-            <li><a href="/">Sign up</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/search">Buy</Link></li>
+            <li><Link to="/">Sell</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/logout">Logout</Link></li>
+            <li><Link to="/sign-up">Sign up</Link></li>
           </div>
         </ul>
       </nav>

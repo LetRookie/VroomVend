@@ -15,8 +15,16 @@
     height: 200px;
     border-bottom: solid 2px #000;
 }
+.car-list li:hover{
+    cursor: pointer;
+}
+.car-list li:hover img{
+    /* background: rgb(245, 152, 90); */
+    transform: scale(1.1,1.1);
+    transition: ease 0.3s;
+}
 
-img {
+.car-list img{
    width: 200px;
    height: auto;
    box-shadow: 11px 13px 30px -12px rgba(0, 0, 0, 0.7);
