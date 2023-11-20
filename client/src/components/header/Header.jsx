@@ -15,7 +15,7 @@ export default function Header (){
     
             <li><Link to="/">Home</Link></li>
             <li><Link to="/search">Buy</Link></li>
-            <li><Link to="/">Sell</Link></li>
+            <li><Link to="/sell">Sell</Link></li>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/logout">Logout</Link></li>
             <li><Link to="/sign-up">Sign up</Link></li>
