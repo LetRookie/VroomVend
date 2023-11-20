@@ -5,6 +5,7 @@ import Home from "./components/home/Home"
 import Footer from "./components/footer/Footer"
 import Search from "./components/search-page/Search"
 import SellCar from "./components/sell-car/SellCar"
+import Login from "./components/login-modal/Login"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/sell" element={<SellCar />} />
       </Routes>
+      <Login />
       <Footer />
       
     </>
