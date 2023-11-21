@@ -18,7 +18,7 @@ export default function Header (){
             <li><Link to="/sell">Sell</Link></li>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/logout">Logout</Link></li>
-            <li><Link to="/sign-up">Sign up</Link></li>
+            <li><Link to="/signup">Sign up</Link></li>
           </div>
         </ul>
       </nav>

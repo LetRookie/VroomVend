@@ -2,7 +2,7 @@
     padding-bottom: 50px;
 }
 
-.sellForm {
+.sell-car .sellForm {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 20px;
     display: flex;
@@ -11,7 +11,7 @@
     row-gap: 3em;
 }
 
-.form-wrapper {
+.sell-car .form-wrapper {
     border: solid 3px #ff6600;
     border-radius: 1.3em;
     align-items: center;
@@ -21,17 +21,17 @@
     flex-direction: column;
 }
 
-.form-wrapper label,
-.form-wrapper input {
+.sell-car .form-wrapper label,
+.sell-car .form-wrapper input {
     padding: 10px 0 10px 0;
     width: 500px;
 }
 
-.form-wrapper label {
+.sell-car .form-wrapper label {
     text-align: center;
 }
 
-.form-wrapper input:last-child {
+.sell-car .form-wrapper input:last-child {
     border: none;
     border-radius: 0.8em;
     margin:10px 0 10px 0;

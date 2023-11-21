@@ -11,15 +11,15 @@
   
   /* Set a style for all buttons */
   button[type=submit] {
-    padding: 10px 15px;
-
+    padding: 10px 25px;
+    font-size: large;
   }
   .remember {
     display: inline;
     padding-left: 20px;
   }
   
-  .cancelBtn{
+  .cancelBtn {
     font-family: 'Roboto Flex';
     background-color: #fb8435;
     color: white;

@@ -6,7 +6,6 @@ export default function Login() {
                 <form className="modal-content animate" >
                     <div className="imgcontainer">
                         <span className="close" title="Close Modal">&times;</span>
-                        <img src="img_avatar2.png" alt="Avatar" className="avatar" />
                     </div>
 
                     <div className="login-container">
@@ -15,6 +14,9 @@ export default function Login() {
 
                         <label htmlFor="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="psw" required />
+
+                        <label htmlFor="psw"><b>Re-pass</b></label>
+                        <input type="password" placeholder="Enter Re-password" name="psw" required />
 
                         <button type="submit">Login</button>
                         <div className="remember">
