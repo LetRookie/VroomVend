@@ -16,5 +16,14 @@
         "year": "2019",
         "color": " Gun Metallic ",
         "_id": "5b974b13-2a52-40e1-b49f-c4129448fcf8"
+    },
+    "09b901f2-2f0e-416f-81e1-def684702b05": {
+        "brandName": "BMW",
+        "model": "M235 Gran Coupe i xDrive",
+        "year": "2023",
+        "power": "302hps",
+        "color": "Skyscrapper",
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/eurekar-v2/uploads/images/original/2ss.jpg",
+        "_id": "09b901f2-2f0e-416f-81e1-def684702b05"
     }
 }
