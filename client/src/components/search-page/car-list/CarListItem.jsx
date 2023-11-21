@@ -1,11 +1,13 @@
+import {Link} from 'react-router-dom';
+
 export default function CarListItem ({
+    _id,
     brandName,
     model,
     year,   
     power,
     color,
     imageUrl,
-    _id
 }) {
     return (
             <li>
@@ -18,8 +20,8 @@ export default function CarListItem ({
                     <p>{year}</p>
                     <p>{power}</p>
                     <p>{color}</p>
-                    <a href="#" className="detailsButton">Details</a>
                 </div>
+              <Link to={`/cars/${_id}`} className="detailsButton">Details</Link>
             </li>
     );
 }

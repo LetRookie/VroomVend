@@ -7,6 +7,7 @@ import Search from "./components/search-page/Search"
 import SellCar from "./components/sell-car/SellCar"
 import Login from "./components/login-modal/Login"
 import Signup from "./components/register/Signup"
+import Details from "./components/details/Details"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/sell" element={<SellCar />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
+        <Route path="/cars/:carId" element={<Details />}/>
       </Routes>
       <Footer />
       

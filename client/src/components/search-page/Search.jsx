@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import * as carService from '../../services/carService'
 
+import * as carService from '../../services/carService'
 import CarListItem from '../search-page/car-list/CarListItem'
 
 export default function Search() {
@@ -9,8 +9,6 @@ export default function Search() {
         carService.getAll()
         .then(result => setCars(result));
     }, []);
-
-    console.log(cars);
 
     return (
         <div className="buy-cars">
