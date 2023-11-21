@@ -10,16 +10,16 @@
   }
   
   /* Set a style for all buttons */
-  button[type=submit] {
+  .login-modal button[type=submit] {
     padding: 10px 25px;
     font-size: large;
   }
-  .remember {
+  .login-modal .remember {
     display: inline;
     padding-left: 20px;
   }
   
-  .cancelBtn {
+  .login-modal .cancelBtn{
     font-family: 'Roboto Flex';
     background-color: #fb8435;
     color: white;
@@ -31,40 +31,40 @@
     width: 100%;
   }
   
-  .cancelBtn:hover {
+  .login-modal .cancelBtn:hover {
     opacity: 0.8;
   }
   
   /* Extra styles for the cancel button */
-  .cancelBtn {
+  .login-modal .cancelBtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
   }
   
   /* Center the image and position the close button */
-  .imgcontainer {
+  .login-modal .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
   }
   
-  img.avatar {
+  .login-modal img.avatar {
     width: 40%;
     border-radius: 50%;
   }
   
-  .login-container {
+  .login-modal .login-container {
     padding: 16px;
   }
   
-  span.psw {
+  .login-modal span.psw {
     float: right;
     padding-top: 16px;
   }
   
   /* The Modal (background) */
-  .modal {
+  .login-modal .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -78,12 +78,12 @@
     padding-top: 60px;
   }
 
-  .container {
+  .login-modal .container {
     border-radius: 30px;
   }
   
   /* Modal Content/Box */
-  .modal-content {
+  .login-modal .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
@@ -92,7 +92,7 @@
   }
   
   /* The Close Button (x) */
-  .close {
+  .login-modal .close {
     position: absolute;
     right: 25px;
     top: 0;
@@ -101,14 +101,14 @@
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .login-modal .close:hover,
+  .login-modal .close:focus {
     color: red;
     cursor: pointer;
   }
   
   /* Add Zoom Animation */
-  .animate {
+  .login-modal .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
   }
@@ -126,11 +126,11 @@
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
-    span.psw {
+    .login-modal span.psw {
        display: block;
        float: none;
     }
-    .cancelBtn {
+    .login-modal .cancelBtn {
        width: 100%;
     }
 }
