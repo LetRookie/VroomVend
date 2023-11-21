@@ -1,38 +1,20 @@
 {
-    "3564027f-adcd-4425-b2c0-1253d2386c0c": {
-        "brand": "Opel",
-        "model": "Insignia",
-        "power": "130",
-        "imageUrl": "https://cdn3.focus.bg/autodata/i/opel/insignia/insignia-sports-tourer/large/a7c1554987be9195a9564c25e738ea23.jpg",
-        "year": "2008",
-        "color": "black",
-        "_id": "3564027f-adcd-4425-b2c0-1253d2386c0c"
+    "871754dd-02d2-417a-a744-1d3294942260": {
+        "brandName": "Opel",
+        "model": "Meriva",
+        "power": "110hps",
+        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs1.cdn.autoevolution.com%2Fimages%2Fgallery%2FOPEL-Meriva-5241_21.jpg&f=1&nofb=1&ipt=62af18aab3bd697fc1a45e054c997088e66c4a36325555d164e1f04d058a8e33&ipo=images",
+        "year": "2010",
+        "color": "Silver",
+        "_id": "871754dd-02d2-417a-a744-1d3294942260"
     },
-    "3564027f-adcd-4425-b2c0-1253d238dskj": {
-        "brand": "Opel",
-        "model": "Zafira",
-        "power": "130",
-        "imageUrl": "https://cdn3.focus.bg/autodata/i/opel/insignia/insignia-sports-tourer/large/a7c1554987be9195a9564c25e738ea23.jpg",
-        "year": "2008",
-        "color": "white",
-        "_id": "3564027f-adcd-4425-b2c0-1253d238dskj"
-    },
-    "c64db398-91cd-487c-b900-86058c0422f8": {
-        "brand": "Audi",
-        "model": "RS4",
-        "power": "450",
-        "imageUrl": "https://cdn3.focus.bg/autodata/i/audi/rs4/rs4-b8/medium/c306561ccaa4cd976faa2da9c6b7d92c.jpg",
-        "year": "2012",
-        "color": "dark-red",
-        "_id": "c64db398-91cd-487c-b900-86058c0422f8"
-    },
-    "18bfdb21-333b-42bd-a32c-c114263f2569": {
-        "brand": "BMW",
-        "model": "M3",
-        "power": "431",
-        "imageUrl": "https://cdn3.focus.bg/autodata/i/bmw/m3/bmw-v-f80/medium/d6f9727a89ff6ecf6c3bb82de31a1934.jpg",
-        "year": "2013",
-        "color": "cyen",
-        "_id": "18bfdb21-333b-42bd-a32c-c114263f2569"
+    "5b974b13-2a52-40e1-b49f-c4129448fcf8": {
+        "brandName": "Nissan",
+        "model": "Leaf SL",
+        "power": "147hps",
+        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftopgear.com.my%2Fsites%2Fdefault%2Ffiles%2Ficon%2F20190723_LEAF1980.jpg&f=1&nofb=1&ipt=982daca21eb358b58f53e2aad79aac09d0961f113eec7fa123e6e63e5c2c1b71&ipo=images",
+        "year": "2019",
+        "color": " Gun Metallic ",
+        "_id": "5b974b13-2a52-40e1-b49f-c4129448fcf8"
     }
 }
