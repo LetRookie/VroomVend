@@ -1,9 +1,22 @@
-export default function SellCar() {
-    const sellCarSubmitHandler = (e) => {
-        e.preventDefault();
+import { useNavigate } from 'react-router-dom';
 
+import * as carService from '../../services/carService';
+
+export default function SellCar() {
+
+    const navigate = useNavigate();
+
+    const sellCarSubmitHandler = async (e) => {
+        e.preventDefault();
         const carData = Object.fromEntries(new FormData(e.currentTarget));
-        console.log(carData);
+        try {
+            const result = await carService.create(carData);
+            
+            navigate('/search');
+        } catch (err) {
+            // Create error notifcation modal
+            alert(err);
+        }
     }
 
     return (

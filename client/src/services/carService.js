@@ -1,14 +1,15 @@
 const baseUrl = 'http://localhost:3030/jsonstore';
 
-export const create = async (carData) => {
+export const create = async (data) => {
 
-   const response = fetch(`${baseUrl}/cars/`, {
+   const response = await fetch(`${baseUrl}/cars/`, {
         method: 'POST',
         headers: {
-            'Cpntent-Type': 'application/jeson'
+            'Content-Type': 'application/json'
         },
-        body:JSON.stringify(carData)
+        body:JSON.stringify(data)
     });
+
     const result = await response.json();
 
     return result;
