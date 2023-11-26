@@ -17,3 +17,4 @@ export const getCar = async (carId) => {
     const result = await request.get(`${baseUrl}/${carId}`);
     return result;
 }
+
