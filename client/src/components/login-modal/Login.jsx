@@ -1,33 +1,50 @@
+import useForm from "../../hooks/useForm"
+
+
 export default function Login() {
+    
+    const { values, onChange, onSubmit } = useForm({
+        email: '',
+        password: '',
+    });
+
+
     return (
         <>
             <div id="login-modal" className="login-modal">
 
-                <form className="modal-content animate" >
+                <form className="modal-content animate" onSubmit={onSubmit}>
                     <div className="imgcontainer">
                         <span className="close" title="Close Modal">&times;</span>
                     </div>
 
                     <div className="login-container">
-                        <label htmlFor="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required />
+                        <label htmlFor="email"><b>E-mail</b></label>
+                        <input
+                            type="text"
+                            placeholder="Enter email"
+                            name="email"
+                            onChange={onChange}
+                            value={values.email}
+                        />
 
-                        <label htmlFor="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required />
-
-                        <label htmlFor="psw"><b>Re-pass</b></label>
-                        <input type="password" placeholder="Enter Re-password" name="psw" required />
+                        <label htmlFor="password"><b>Password</b></label>
+                        <input
+                            type="password"
+                            placeholder="Enter Password"
+                            name="password"
+                            onChange={onChange}
+                            value={values.password}
+                        />
 
                         <button type="submit">Login</button>
                         <div className="remember">
-                        <input type="checkbox" name="remember" />
-                        <label>Remember me</label>
                         </div>
                     </div>
 
                     <div className="login-container" >
+                        <span className="psw">Create account <a href="#">here!</a></span>
                         <button type="button" className="cancelBtn">Cancel</button>
-                        <span className="psw">Forgot <a href="#">password?</a></span>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,4 @@
 import LastAdded from "../last-added/LastAdded";
-import Footer from "../footer/Footer";
 import { Fragment } from "react";
 
 export default function Home() {
