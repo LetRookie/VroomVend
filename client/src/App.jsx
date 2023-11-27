@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import { useState } from "react"
 
+import AuthContext from "./contexts/authContext"
 import './assets/styles/styles.css'
 
 import Header from "./components/header/Header"
@@ -15,29 +16,30 @@ import Details from "./components/details/Details"
 
 function App() {
 
-  const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState({});
 
-  const loginSubmitHandler = (values) => {
+    const loginSubmitHandler = (values) => {
 
-    console.log(values);
-    
-  }
+        console.log(values);
 
-  return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/sell" element={<SellCar />} />
-        <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/cars/:carId" element={<Details />} />
-      </Routes>
-      <Footer />
+    }
 
-    </>
-  )
+    return (
+        <AuthContext.Provider value={{loginSubmitHandler}}>
+            <>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/sell" element={<SellCar />} />
+                    <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/cars/:carId" element={<Details />} />
+                </Routes>
+                <Footer />
+            </>
+        </AuthContext.Provider>
+    )
 }
 
 export default App
