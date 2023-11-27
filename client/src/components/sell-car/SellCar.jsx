@@ -35,14 +35,16 @@ export default function SellCar() {
                     <input type="text" name="power" id="power" placeholder="   Enter hps..." />
                     <label htmlFor="color">color:</label>
                     <input type="text" name="color" id="color" placeholder="   Enter color of car..." />
-                    <label htmlFor="imageUrl">Image:</label>
-                    <input type="file" name="imageUrl" id="imageUrl" multiple={true} placeholder="   Main image url..." />
-                    {/* <label htmlFor="img1">Image 2:</label>
+                    {/* <label htmlFor="imageUrl">Image:</label> */}
+                    {/* <input type="file" name="imageUrl" id="imageUrl" multiple={true} placeholder="   Main image url..." /> */}
+                    <label htmlFor="imageUrl">Image:</label> 
+                    <input type="text" name="imageUrl" id="imageUrl" placeholder="   Main image url..." />
+                    <label htmlFor="img1">Image 2:</label>
                     <input type="text" name="img1" id="img1" placeholder="   Image 2 url..." />
                     <label htmlFor="img2">Image 3:</label>
                     <input type="text" name="img2" id="img2" placeholder="   Image 3 url..." />
                     <label htmlFor="img3">Image 4:</label>
-                    <input type="text" name="img3" id="img3" placeholder="   Image 4 url..." /> */}
+                    <input type="text" name="img3" id="img3" placeholder="   Image 4 url..." />
                     <label htmlFor="subscription">Subscription:</label>
                     <textarea name="subscription" id="subsciption" cols="40" rows="5"></textarea>
 
