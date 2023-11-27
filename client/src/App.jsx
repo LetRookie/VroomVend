@@ -29,17 +29,20 @@ function App() {
     const loginSubmitHandler = async (values) => {
 
         // NEED TRY CATCH BLOCK (ERROR HANDLING) FOR UNREGISTERED USERS(GUESTS)-NOTIFICATION
-
         const result = await authService.login(values.email, values.password);
-
         setAuth(result);
-
         navigate(Path.Home);
+    }
 
+    const signupSubmitHandler = async (values) => {
+        const result = await authService.signup(values.username, values.email, values.password);
+        setAuth(result);
+        navigate(Path.Home);
     }
 
     const providedValues = {
         loginSubmitHandler,
+        signupSubmitHandler,
         username: auth.username,
         email: auth.email,
         isAuthenticated: !!auth.username,
