@@ -1,10 +1,21 @@
 const buildOptions = (data) => {
     const options = {};
 
+    const token = localStorage.getItem('accessToken');
+
+    // options.headers = {};
+    
     if(data) {
         options.body = JSON.stringify(data);
         options.headers = {
             'content-type':'application/json'
+        }
+    }
+    
+    if(token) {
+        options.headers = {
+            ...options.headers,
+            'X-Authorization' : token
         }
     }
 
@@ -17,6 +28,10 @@ const request = async (method, url, data) => {
         ...buildOptions(data),
         method,
     });
+
+    if(response.status === 204){
+        return {};
+    }
 
     if(!response.ok){
         throw new Error('Unknonwn error occured');

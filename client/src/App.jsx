@@ -12,6 +12,7 @@ import Footer from "./components/footer/Footer"
 import Search from "./components/search-page/Search"
 import SellCar from "./components/sell-car/SellCar"
 import Login from "./components/login-modal/Login"
+import Logout from "./components/logout/Logout";
 import Signup from "./components/register/Signup"
 import Details from "./components/details/Details"
 
@@ -19,7 +20,11 @@ import Details from "./components/details/Details"
 function App() {
     const navigate = useNavigate();
 
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState(() => {
+        localStorage.removeItem('accessToken')
+
+        return {};
+    });
 
     // {"email":"peter@abv.bg",
     // "username":"Peter",
@@ -31,21 +36,33 @@ function App() {
         // NEED TRY CATCH BLOCK (ERROR HANDLING) FOR UNREGISTERED USERS(GUESTS)-NOTIFICATION
         const result = await authService.login(values.email, values.password);
         setAuth(result);
+
+        localStorage.setItem('accessToken', result.accessToken);
+
         navigate(Path.Home);
     }
 
     const signupSubmitHandler = async (values) => {
         const result = await authService.signup(values.username, values.email, values.password);
         setAuth(result);
+
+        localStorage.setItem('accessToken', result.accessToken);
+
         navigate(Path.Home);
+    }
+
+    const logoutHandler = () => {
+        setAuth({});
+        localStorage.removeItem('accessToken')
     }
 
     const providedValues = {
         loginSubmitHandler,
         signupSubmitHandler,
+        logoutHandler,
         username: auth.username,
         email: auth.email,
-        isAuthenticated: !!auth.username,
+        isAuthenticated: !!auth.accessToken,
     }
 
     return (
@@ -59,6 +76,7 @@ function App() {
                     <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/cars/:carId" element={<Details />} />
+                    <Route path={Path.Logout} element={<Logout />} />
                 </Routes>
                 <Footer />
             </>
