@@ -38,8 +38,15 @@ function App() {
 
     }
 
+    const providedValues = {
+        loginSubmitHandler,
+        username: auth.username,
+        email: auth.email,
+        isAuthenticated: !!auth.username,
+    }
+
     return (
-        <AuthContext.Provider value={{loginSubmitHandler}}>
+        <AuthContext.Provider value={providedValues}>
             <>
                 <Header />
                 <Routes>
