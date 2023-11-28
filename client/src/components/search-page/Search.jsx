@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 import * as carService from '../../services/carService'
 import CarListItem from '../search-page/car-list/CarListItem'
+import SelectSearchBox from "./search-box/SelectSearch";
 
 export default function Search() {
     const [cars, setCars] = useState([]);
@@ -13,7 +14,7 @@ export default function Search() {
     return (
         <div className="buy-cars">
             <section className="search">
-                <p>Search Form Here</p>
+                <SelectSearchBox />
             </section>
             <section className="car-list">
                 <ul>

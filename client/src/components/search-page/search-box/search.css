@@ -1,0 +1,29 @@
+.search-box {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #ff6600;
+}
+
+.formElement {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.formElement select {
+    width: 150px;
+}
+
+.search-box input[type="submit"] {
+    padding: 10px;
+    background: #ff6600;
+    color: black;
+    border: none;
+    border-radius: 1.5em;
+}
