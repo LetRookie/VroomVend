@@ -1368,17 +1368,17 @@
                 subscription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis distinctio aperiam rerum itaque. Natus, quam! Dolor in aliquid voluptatibus at id quia nisi. Aperiam culpa adipisci officia similique delectus."
             },
             "09b901f2-2f0e-416f-81e1-def684702b05": {
-                brandNam: "BMW",
-                mode: "M235 Gran Coupe i xDrive",
+                brandName: "BMW",
+                model: "M235 Gran Coupe i xDrive",
                 year: "2023",
                 power: "302hps",
-                imagUrl: "https://images.prismic.io/carwow/da024fea-3ccd-4e9a-99d2-aad65bcec58b_2021+BMW+M3+front+quarter+moving+2.jpg?fit=crop&q=60&w=1125&cs=tinysrgb&auto=format",
+                imageUrl: "https://images.prismic.io/carwow/da024fea-3ccd-4e9a-99d2-aad65bcec58b_2021+BMW+M3+front+quarter+moving+2.jpg?fit=crop&q=60&w=1125&cs=tinysrgb&auto=format",
                 color: "Skyscrapper",
                 _id: "09b901f2-2f0e-416f-81e1-def684702b05",
                 img1: "https://images.prismic.io/carwow/197f685e-996a-4af1-b326-60d0e0341ecc_2021+BMW+M3+front+quarter+static.jpg?fit=crop&q=60&w=1125&cs=tinysrgb&auto=format",
                 img2: "https://images.prismic.io/carwow/3b0685d1-b55c-40c7-8e4e-982ec7f1c1a8_2021+BMW+M3+rear+quarter+static.jpg?fit=crop&q=60&w=1125&cs=tinysrgb&auto=format",
                 img3: "https://images.prismic.io/carwow/975b2172-93b7-4796-9fe1-59797d77c4a0_2021+BMW+M3+full+cabin.jpg?fit=crop&q=60&w=1125&cs=tinysrgb&auto=format",
-                subscriptio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis distinctio aperiam rerum itaque. Natus, quam! Dolor in aliquid voluptatibus at id quia nisi. Aperiam culpa adipisci officia similique delectus."
+                subscription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis distinctio aperiam rerum itaque. Natus, quam! Dolor in aliquid voluptatibus at id quia nisi. Aperiam culpa adipisci officia similique delectus."
             }
         },
 

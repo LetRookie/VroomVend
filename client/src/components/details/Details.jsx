@@ -4,13 +4,13 @@ import * as carService from '../../services/carService';
 
 export default function Details() {
     const [car, setCar] = useState({})
-    const {carId} = useParams();
+    const { carId } = useParams();
 
 
-    useEffect(()=>{
+    useEffect(() => {
         carService.getCar(carId)
-        .then(setCar);// validation
-    },[carId])
+            .then(setCar);// validation
+    }, [carId])
 
     return (
         <div className="details-wrapper">
@@ -28,6 +28,10 @@ export default function Details() {
                 <h3>{`${car.brandName}-${car.model}-${car.year}`}</h3>
                 <h4>{`${car.power},${car.color}`}</h4>
                 <p>{car.subscription}</p>
+                <div className="update-details">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
             </div>
         </div>
     )
