@@ -1,5 +1,6 @@
+import { Fragment} from "react";
+
 import LastAdded from "../last-added/LastAdded";
-import { Fragment } from "react";
 
 export default function Home() {
     return (
