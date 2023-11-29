@@ -12,7 +12,7 @@ export default function CarCard({
                 alt={`${brandName}`} />
             <div className="container">
                 <h4><b>{brandName}</b></h4>
-                <p>{`${model}${year}`}</p>
+                <p>{`${model} - ${year}`}</p>
             </div>
         </div>
     )
