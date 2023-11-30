@@ -17,8 +17,8 @@ export default function LastAdded() {
       <h3>Lately Offered Cars</h3>
 
       <div className="card-list">
-        {lastAdded.reverse().slice(0, 3).map(car => (
-          <CarCard key={car._id} {...car} />
+        {lastAdded.reverse().slice(0, 3).map(lastCar => (
+          <CarCard key={lastCar._id} {...lastCar} />
         ))}
       </div>
     </div>

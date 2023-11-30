@@ -78,6 +78,7 @@ export default function Details() {
                 <h3>{`${car.brandName}-${car.model}-${car.year}`}</h3>
                 <h4>{`${car.power},${car.color}`}</h4>
                 <p>{car.subscription}</p>
+                
                 <div className="update-details">
                     <button>Edit</button>
                     <button>Delete</button>

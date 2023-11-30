@@ -1,6 +1,8 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm"
 import AuthContext from "../../contexts/authContext";
+import Path from "../../lib/paths";
 
 const loginFormKeys = {
     email: 'email',
@@ -51,8 +53,8 @@ export default function Login() {
                     </div>
 
                     <div className="login-container" >
-                        <span className="psw">Create account <a href="#">here!</a></span>
-                        <button type="button" className="cancelBtn">Cancel</button>
+                        <span className="psw">Create account <Link to="/signup">here!</Link></span>
+                        <button type="button" className="cancelBtn"><Link to={Path.Home}>Cancel</Link></button>
                     </div>
                 </form>
             </div>

@@ -73,7 +73,7 @@ function App() {
                     <Route path={Path.Home} element={<Home />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/sell" element={<SellCar />} />
-                    <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+                    <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/cars/:carId" element={<Details />} />
                     <Route path={Path.Logout} element={<Logout />} />
