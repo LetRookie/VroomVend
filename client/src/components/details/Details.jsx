@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import * as carService from '../../services/carService';
 import AuthContext from '../../contexts/authContext';
+import { pathToUrl } from '../../utils/pathUtil';
+import Path from '../../lib/paths';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -82,11 +84,11 @@ export default function Details() {
                 <h3>{`${car.brandName}-${car.model}-${car.year}`}</h3>
                 <h4>{`${car.power},${car.color}`}</h4>
                 <p>{car.subscription}</p>
-                
+
              {isOwner && (
                 <div className="update-details">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <Link to={pathToUrl(Path.CarEdit,{carId})}><button>Edit</button></Link>
+                    <Link to="/cars/:carId/delete"><button>Delete</button></Link>
                 </div>
              )}
             </div>
