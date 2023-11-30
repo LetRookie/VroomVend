@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import * as carService from '../../services/carService';
+import AuthContext from '../../contexts/authContext';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -16,6 +17,7 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 
 export default function Details() {
+    const {id} = useContext(AuthContext);
     const [car, setCar] = useState({});
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const { carId } = useParams();
@@ -24,7 +26,9 @@ export default function Details() {
     useEffect(() => {
         carService.getCar(carId)
             .then(setCar);// validation
-    }, [carId])
+    }, [carId]);
+
+    const isOwner = id === car._ownerId;
 
     return (
         <>
@@ -79,10 +83,12 @@ export default function Details() {
                 <h4>{`${car.power},${car.color}`}</h4>
                 <p>{car.subscription}</p>
                 
+             {isOwner && (
                 <div className="update-details">
                     <button>Edit</button>
                     <button>Delete</button>
                 </div>
+             )}
             </div>
         </>
     )
