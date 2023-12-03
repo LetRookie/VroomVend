@@ -16,6 +16,7 @@ import Logout from "./components/logout/Logout";
 import Signup from "./components/register/Signup"
 import Details from "./components/details/Details"
 import CarEdit from "./components/car-edit/CarEdit";
+import { pathToUrl } from "./utils/pathUtil";
 
 
 function App() {
@@ -78,7 +79,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/cars/:carId" element={<Details />} />
-                    <Route path="/cars/:carId/edit" element={<CarEdit />} />
+                    <Route path={Path.CarEdit} element={<CarEdit />} />
                     <Route path={Path.Logout} element={<Logout />} />
                 </Routes>
                 <Footer />

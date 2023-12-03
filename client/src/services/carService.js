@@ -18,3 +18,11 @@ export const getCar = async (carId) => {
     return result;
 }
 
+export const edit = async (carId, data) => {
+    const result = await request.put(`${baseUrl}/${carId}`, data);
+    return result;
+}
+
+export const remove = async (carId) => request.remove(`${baseUrl}/${carId}`);
+
+

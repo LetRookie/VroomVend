@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import * as carService from '../../services/carService';
@@ -19,7 +19,8 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 
 export default function Details() {
-    const {id} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const { id } = useContext(AuthContext);
     const [car, setCar] = useState({});
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const { carId } = useParams();
@@ -31,6 +32,16 @@ export default function Details() {
     }, [carId]);
 
     const isOwner = id === car._ownerId;
+
+    const deleteButtonClickHandler = async () => {
+        const hasConfirmed = confirm('Are you sure you want to delete the announcement');
+
+        if(hasConfirmed) {
+
+            await carService.remove(carId);
+            navigate('/search');
+        }
+    }
 
     return (
         <>
@@ -85,12 +96,13 @@ export default function Details() {
                 <h4>{`${car.power},${car.color}`}</h4>
                 <p>{car.subscription}</p>
 
-             {isOwner && (
-                <div className="update-details">
-                    <Link to={pathToUrl(Path.CarEdit,{carId})}><button>Edit</button></Link>
-                    <Link to="/cars/:carId/delete"><button>Delete</button></Link>
-                </div>
-             )}
+                {isOwner && (
+                    <div className="update-details">
+                        <Link to={pathToUrl(Path.CarEdit, { carId })}><button>Edit</button></Link>
+                        {/* <Link to={pathToUrl(Path.CarDelete,{carId})}><button>Delete</button></Link> */}
+                        <button onClick={deleteButtonClickHandler}>Delete</button>
+                    </div>
+                )}
             </div>
         </>
     )
