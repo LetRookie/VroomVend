@@ -1,5 +1,4 @@
 export default function CarCard({
-    _id,
     brandName,
     model,
     year,

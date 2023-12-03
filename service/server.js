@@ -1361,7 +1361,7 @@
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 brandName: "Opel",
                 model: "Meriva",
-                year: "2010",
+                year: "2020",
                 power: "110hps",
                 color: "Silver",
                 imageUrl: "https://s1.cdn.autoevolution.com/images/gallery/OPEL-Meriva-5241_19.jpg",
@@ -1390,7 +1390,7 @@
             "09b901f2-2f0e-416f-81e1-def684702b05": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 brandName: "BMW",
-                model: "M235 Gran Coupe i xDrive",
+                model: "M235",
                 year: "2023",
                 power: "302hps",
                 color: "Skyscrapper",
@@ -1405,7 +1405,7 @@
             "1abdcb1b-e444-4308-9cc1-2b3f388adb4e": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 brandName: "BMW",
-                model: "750 i",
+                model: "750i",
                 year: "2022",
                 power: "230hps",
                 color: "White",
@@ -1428,7 +1428,7 @@
                 img1: "https://s.car.info/image_files/full/0-1036026.jpg",
                 img2: "https://s.car.info/image_files/1920/0-1036029.jpg",
                 img3: "https://s.car.info/image_files/1920/0-1036030.jpg",
-                subscription: "2022 was an electrifying year for Opel in every respect: for 160 years, the brand with the ‘Blitz’ has been making innovations affordable for a wide audience. This was also the case in the anniversary year - first and foremost with the new Opel Astra, which celebrated its dealer premiere in the spring and has been delighting experts and customers alike ever since.",
+                subscription: "2022 was an electrifying year for Opel in every respect: for 160 years, the brand with the 'Blitz' has been making innovations affordable for a wide audience. This was also the case in the anniversary year - first and foremost with the new Opel Astra, which celebrated its dealer premiere in the spring and has been delighting experts and customers alike ever since.",
                 _createdOn: 1701608545285,
                 _id: "3b228993-3dad-486d-8c8a-a241be100dcd"
             }

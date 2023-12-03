@@ -15,13 +15,13 @@ export default function Search() {
         <div className="buy-cars">
             <section className="search">
                 <SelectSearchBox />
-            </section>
             <section className="car-list">
                 <ul>
                     {cars.map (car => (
                         <CarListItem key={car._id} {...car} />
                     ))}
                 </ul>
+            </section>
             </section>
         </div>
     )

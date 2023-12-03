@@ -57,4 +57,11 @@ export const getModels = async (brandName) => {
     return result;
 }
 
+export const getModelYear = async (model) => {
+    const query = new URLSearchParams(`?where=model%3D%22${model}%22&distinct=year`);
+    const result = await request.get(`${baseUrl}?${query}`);
+    return result;
+
+}
+
 
