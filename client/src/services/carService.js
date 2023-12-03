@@ -8,6 +8,18 @@ export const getAll = async () => {
     return result;
 }
 
+//I will be back on this soon
+// export const getLatest = async () => {
+//     const query = new URLSearchParams({
+//         sortBy: `_createdOn desc`,
+//         count: 3
+//     });
+
+//     const result = await request.get(`${baseUrl}?${query}`)
+
+//     return result;
+// }
+
 export const create = async (data) => {
     const result = await request.post(baseUrl, data);
     return result;
@@ -24,5 +36,25 @@ export const edit = async (carId, data) => {
 }
 
 export const remove = async (carId) => request.remove(`${baseUrl}/${carId}`);
+
+
+//API for search box
+
+export const getBrands = async () => {
+    const query = new URLSearchParams({
+        distinct: "brandName",
+        select: "brandName"
+    });
+    const result = await request.get(`${baseUrl}?${query}`);
+
+    return result;
+}
+
+export const getModels = async (brandName) => {
+    const query = new URLSearchParams(`?where=brandName%3D%22${brandName}%22`);
+    const result = await request.get(`${baseUrl}?${query}`);
+
+    return result;
+}
 
 

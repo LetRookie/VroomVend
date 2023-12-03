@@ -20,7 +20,12 @@ export default function LastAdded() {
         {lastAdded.reverse().slice(0, 3).map(lastCar => (
           <CarCard key={lastCar._id} {...lastCar} />
         ))}
+
+        {!lastAdded.length && (
+          <h2>No cars offered yet</h2>
+        )}
       </div>
+
     </div>
   )
 }
