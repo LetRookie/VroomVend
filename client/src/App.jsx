@@ -1,8 +1,6 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
-import AuthContext from "./contexts/authContext";
-import * as authService from "./services/authService";
+import {AuthProvider} from "./contexts/authContext";
 import Path from "./lib/paths";
 import './assets/styles/styles.css';
 
@@ -16,60 +14,13 @@ import Logout from "./components/logout/Logout";
 import Signup from "./components/register/Signup"
 import Details from "./components/details/Details"
 import CarEdit from "./components/car-edit/CarEdit";
-import { pathToUrl } from "./utils/pathUtil";
 
 
 function App() {
-    const navigate = useNavigate();
-
-    const [auth, setAuth] = useState(() => {
-        localStorage.removeItem('accessToken')
-
-        return {};
-    });
-
-    // {"email":"peter@abv.bg",
-    // "username":"Peter",
-    // "_id":"35c62d76-8152-4626-8712-eeb96381bea8",
-    // "accessToken":"4b0f85a9bf7b55d32c61de75b33cfeb4f978982c86a5ccea726bc1289e1095cd"}
-
-    const loginSubmitHandler = async (values) => {
-
-        // NEED TRY CATCH BLOCK (ERROR HANDLING) FOR UNREGISTERED USERS(GUESTS)-NOTIFICATION
-        const result = await authService.login(values.email, values.password);
-        setAuth(result);
-
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
-    }
-
-    const signupSubmitHandler = async (values) => {
-        const result = await authService.signup(values.username, values.email, values.password);
-        setAuth(result);
-
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
-    }
-
-    const logoutHandler = () => {
-        setAuth({});
-        localStorage.removeItem('accessToken')
-    }
-
-    const providedValues = {
-        loginSubmitHandler,
-        signupSubmitHandler,
-        logoutHandler,
-        username: auth.username,
-        email: auth.email,
-        id: auth._id,
-        isAuthenticated: !!auth.accessToken,
-    }
+   
 
     return (
-        <AuthContext.Provider value={providedValues}>
+        <AuthProvider>
             <>
                 <Header />
                 <Routes>
@@ -84,7 +35,7 @@ function App() {
                 </Routes>
                 <Footer />
             </>
-        </AuthContext.Provider>
+        </AuthProvider>
     )
 }
 
