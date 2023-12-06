@@ -90,10 +90,8 @@
   }
   
   .mySwiper2 {
-    margin-top: 30px;
-    border: 3px solid black;
-    height: 500px;
-    width: 80%;
+    height: 100%;
+    width: 100%;
   }
   
   .mySwiper {
@@ -118,27 +116,3 @@
     height: 100%;
     object-fit: cover;
   }
-
-  .details {
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-  .details h3, .details h4 {
-    font-family: 'Roboto Flex';
-    line-height: 2;
-}
-
-.details h3 {
-    font-size: 32px;
-    text-decoration: underline;
-}
-.details h4 {
-    font-size: 24px;
-    color: dimgray;
-}
-.details p {
-    font-size: 18px;
-} 
