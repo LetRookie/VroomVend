@@ -34,3 +34,26 @@
    height: auto;
    box-shadow: 11px 13px 30px -12px rgba(0, 0, 0, 0.7);
 }
+
+.pagination {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.2em;
+}
+
+.pagination li {
+    padding: 15px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.pagination li a {
+    color: #000;
+}
+
+.pagination li:hover {
+    background-color: rgb(248, 187, 130);
+    cursor: pointer;
+}
