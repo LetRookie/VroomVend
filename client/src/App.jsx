@@ -17,6 +17,7 @@ import Signup from "./components/register/Signup"
 import Details from "./components/details/Details"
 import CarEdit from "./components/car-edit/CarEdit";
 import { pathToUrl } from "./utils/pathUtil";
+import Pagination from "./components/pagination/Pagination";
 
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/cars/:carId" element={<Details />} />
+                    <Route path="/pagination" element={<Pagination/>} />
                     <Route path={Path.CarEdit} element={<CarEdit />} />
                     <Route path={Path.Logout} element={<Logout />} />
                 </Routes>

@@ -1431,6 +1431,51 @@
                 subscription: "2022 was an electrifying year for Opel in every respect: for 160 years, the brand with the 'Blitz' has been making innovations affordable for a wide audience. This was also the case in the anniversary year - first and foremost with the new Opel Astra, which celebrated its dealer premiere in the spring and has been delighting experts and customers alike ever since.",
                 _createdOn: 1701608545285,
                 _id: "3b228993-3dad-486d-8c8a-a241be100dcd"
+            },
+            "c6d030d8-4e69-4e70-9991-24c70571add6": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                brandName: "Mercedes",
+                model: "S-Class",
+                year: "2020",
+                power: "463hps",
+                color: "Silver",
+                imageUrl: "https://hips.hearstapps.com/hmg-prod/images/2018-mercedes-benz-s-class-mmp-1545171931.jpg?crop=0.912xw:0.743xh;0,0.178xh&resize=1200:*",
+                img1: "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/2018-Mercedes-Benz-S450-Sedan-4Matic-114.jpg?resize=980:*",
+                img2: "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/2018-Mercedes-Benz-S450-Sedan-4Matic-117.jpg?resize=980:*",
+                img3: "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/2018-Mercedes-Benz-S450-Sedan-4Matic-120.jpg?resize=980:*",
+                subscription: "The 2020 Mercedes-Benz S-class has long been a shining example of what luxury should be, largely due to its sumptuous looks and impressive performance. Whether you choose the spacious sedan, dignified coupe, or lavish convertible, these top-shelf Benzes are chock full with the latest technology and the finest of materials. ",
+                _createdOn: 1701977391978,
+                _id: "c6d030d8-4e69-4e70-9991-24c70571add6"
+            },
+            "b1217644-a813-4dc9-a437-854ac0fb83e4": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                brandName: "Mercedes",
+                model: "E Class",
+                year: "2022",
+                power: "255hps",
+                color: "Silver",
+                imageUrl: "https://media.ed.edmunds-media.com/mercedes-benz/e-class/2021/oem/2021_mercedes-benz_e-class_sedan_amg-e-53_fq_oem_1_1600x1067.jpg",
+                img1: "https://media.ed.edmunds-media.com/mercedes-benz/e-class/2021/oem/2021_mercedes-benz_e-class_sedan_amg-e-53_rq_oem_1_1600x1067.jpg",
+                img2: "https://media.ed.edmunds-media.com/mercedes-benz/e-class/2021/oem/2021_mercedes-benz_e-class_sedan_amg-e-53_rq_oem_3_1600x1067.jpg",
+                img3: "https://media.ed.edmunds-media.com/mercedes-benz/e-class/2021/oem/2021_mercedes-benz_e-class_sedan_amg-e-53_fq_oem_2_1600x1067.jpg",
+                subscription: "The Mercedes-Benz E-Class gets a refresh for 2021, helping it maintain its status as the class benchmark. The E-Class doesn't feel like a totally different car, but that's hardly a bad thing. The premium interior, smooth ride and excellent driver aids all come together in a handsome, well-crafted package.",
+                _createdOn: 1701977851008,
+                _id: "b1217644-a813-4dc9-a437-854ac0fb83e4"
+            },
+            "2c6222ec-4346-4029-bd95-33e770cab591":{
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                brandName: "Mercedes",
+                model: "GLE-Class",
+                year: "2023",
+                power: "420hps",
+                color: "White",
+                imageUrl: "https://media.ed.edmunds-media.com/mercedes-benz/gle-class/2024/oem/2024_mercedes-benz_gle-class_4dr-suv_amg-gle-53_fq_oem_1_1600x1067.jpg",
+                img1: "https://media.ed.edmunds-media.com/mercedes-benz/gle-class/2024/oem/2024_mercedes-benz_gle-class_4dr-suv_amg-gle-53_fq_oem_2_1600x1067.jpg",
+                img2: "https://media.ed.edmunds-media.com/mercedes-benz/gle-class/2024/oem/2024_mercedes-benz_gle-class_4dr-suv_amg-gle-53_rq_oem_1_1600x1067.jpg",
+                img3: "https://media.ed.edmunds-media.com/mercedes-benz/gle-class/2024/oem/2024_mercedes-benz_gle-class_4dr-suv_amg-gle-53_s_oem_1_1600x1067.jpg",
+                subscription: "The Mercedes GLE is one of the best luxury SUVs on sale today. It brings the heat with a top-notch interior, exceptional build quality, helpful technology features and a diverse lineup of engines. This is a luxury SUV that quietly executes its job with ease.",
+                _createdOn: 1701978079183,
+                _id: "2c6222ec-4346-4029-bd95-33e770cab591"
             }
         }
     };

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import * as carService from '../../services/carService'
 import CarListItem from '../search-page/car-list/CarListItem'
 import SelectSearchBox from "./search-box/SelectSearch";
-import NewSelect from "./search-box/NewSelect";
+
 
 export default function Search() {
     const [cars, setCars] = useState([]);
