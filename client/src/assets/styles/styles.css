@@ -114,3 +114,43 @@
     mix-blend-mode: screen;
   }
   /* end paralax section */
+
+
+  /* Dropdown content (hidden by default) */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    top: 65px;
+    right: 20px;
+    z-index: 1;
+  }
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown .show {
+  display: block;
+}
+/* Show the dropdown menu on hover
+.dropdown:hover .dropdown-content {
+  display: block;
+} */

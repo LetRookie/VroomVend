@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../lib/paths";
 
 export default function Header() {
+    const [show, setShow] = useState(false);
     const {
         username,
         isAuthenticated
@@ -27,8 +28,11 @@ export default function Header() {
                             <>
                             <li><Link to="/search">Buy</Link></li>
                             <li><Link to="/sell">Sell</Link></li>
-                            <li><Link to="/logout">Logout</Link></li>
-                            <li>Welcome <b>{username}!</b></li>
+                            <li class="dropdown" onClick={() => setShow(!show)}>Welcome <b>{username}!</b>
+                                <div className={`dropdown-content ${show ? "show" : ""}`}>
+                                    <Link to="/logout">Logout</Link>
+                                </div> 
+                            </li>
                             </>
                         )}
 
@@ -36,7 +40,6 @@ export default function Header() {
                             <>
                             <li><Link to="/search">Buy</Link></li>
                             <li><Link to="/login">Login</Link></li>
-                            <li><Link to="/pagination">Pagination</Link></li>
                             <li><Link to="/signup">Sign up</Link></li>
                             </>
                         )}

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react"
 import * as carService from '../../services/carService'
 import CarListItem from '../search-page/car-list/CarListItem'
 import SelectSearchBox from "./search-box/SelectSearch";
+import Cars from '../pagination/Cars';
+import PaginationFunc from '../pagination/PaginationFunc';
 
 
 export default function Search() {
@@ -14,40 +16,60 @@ export default function Search() {
         year: ''
     })
     const [hasResult, setHasResult] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [activePage, setActivePage] = useState(1);
+    const carsPerPage = 2;
+
 
     const onSubmit = (e) => {
         e.preventDefault();
-        let filteredCars = [];
-
-        if(search.brandName && !search.model && !search.year) {
-            filteredCars = cars.filter(x => x.brandName === search.brandName)
-        }
-
-        if(search.brandName && search.model && !search.year) {
-            filteredCars = cars.filter(x => x.brandName === search.brandName && x.model === search.model)
-        }
-
-        if(search.brandName && !search.model && search.year) {
-            filteredCars = cars.filter(x => x.brandName === search.brandName && x.year === search.year)
-        }
-
-        if(search.brandName && search.model && search.year) {
-            filteredCars = cars.filter(x => x.brandName === search.brandName && x.model === search.model && x.year === search.year)
-        }
+        setCurrentPage(1);
+        setActivePage(1)
         
-        setFilteredCars(filteredCars)
-        setHasResult(true);
-        console.log(search);
+        if(search.brandName === ''){
+            setHasResult(false);
+        }else{
+            let filteredCars = [];
+
+            if(search.brandName && !search.model && !search.year) {
+                filteredCars = cars.filter(x => x.brandName === search.brandName)
+            }
+    
+            if(search.brandName && search.model && !search.year) {
+                filteredCars = cars.filter(x => x.brandName === search.brandName && x.model === search.model)
+            }
+    
+            if(search.brandName && !search.model && search.year) {
+                filteredCars = cars.filter(x => x.brandName === search.brandName && x.year === search.year)
+            }
+    
+            if(search.brandName && search.model && search.year) {
+                filteredCars = cars.filter(x => x.brandName === search.brandName && x.model === search.model && x.year === search.year)
+            }
+            
+            setFilteredCars(filteredCars)
+            setHasResult(true);
+        }
     };
+
+    const indexOfLastCar = currentPage * carsPerPage; //6 , 12
+    const indexOfFirstCar = indexOfLastCar - carsPerPage; //0, 6
+    const currentCar = cars.slice(indexOfFirstCar, indexOfLastCar);//6 cars
+
+    //Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     const mapedCars = (c) => {
         return c.map(car =>
-            <CarListItem key={car._id} {...car} />)
+            <Cars key={car._id} {...car} loading={loading} />)
     }
 
     useEffect(() => {
+        setLoading(true)
         carService.getAll()
             .then(result => setCars(result));
+        setLoading(false)
     }, []);
 
     return (
@@ -60,11 +82,18 @@ export default function Search() {
             </section>
             <section className="car-list">
                 <ul>
-                    {!hasResult ? mapedCars(cars) :
-                        filteredCars.length ? mapedCars(filteredCars) : <p>Nqma goo</p> 
+                    {!hasResult ? mapedCars(currentCar) :
+                        filteredCars.length ? mapedCars(filteredCars.slice(indexOfFirstCar, indexOfLastCar)) : <p className="no-content">No Content</p> 
                     }
                 </ul>
             </section>
+            <PaginationFunc
+                carsPerPage={carsPerPage}
+                totalCars={hasResult ? filteredCars.length : cars.length}
+                paginate={paginate}
+                activePage={activePage}
+                setActivePage={setActivePage}
+            />
         </div>
     )
 }

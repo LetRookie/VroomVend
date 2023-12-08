@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 export default function Cars({
-    _id,
     brandName,
     model,
     year,
@@ -13,7 +12,7 @@ export default function Cars({
 
     if(loading) {
         return(
-            <p>Cars are loading...</p>
+            <p style={{color: "#ff6600"}}>Cars are loading...</p>
         )
     }
 

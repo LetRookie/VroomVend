@@ -22,9 +22,9 @@ export default function Pagination() {
 
     //Get Current Posts
 
-    const indexOfLastCar = currentPage * carsPerPage;
-    const indexOfFirstCar = indexOfLastCar - carsPerPage;
-    const currentCar = carsPg.slice(indexOfFirstCar, indexOfLastCar);
+    const indexOfLastCar = currentPage * carsPerPage; //6 , 12
+    const indexOfFirstCar = indexOfLastCar - carsPerPage; //0, 6
+    const currentCar = carsPg.slice(indexOfFirstCar, indexOfLastCar);//6 cars
 
     //Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);

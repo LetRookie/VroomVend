@@ -2,7 +2,7 @@
     background: antiquewhite;
     list-style: none;
     justify-content: center;
-
+    min-height: 70vh;
 }
 
 .car-list li {
@@ -28,4 +28,10 @@
    width: 200px;
    height: auto;
    box-shadow: 11px 13px 30px -12px rgba(0, 0, 0, 0.7);
+}
+
+.no-content{
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
 }
