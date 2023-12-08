@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import * as authService from "../services/authService";
+import Path from "../lib/paths";
 
 
 
@@ -15,6 +16,7 @@ export const AuthProvider = ({
     const navigate = useNavigate();
 
     const [auth, setAuth] = useState(() => {
+
         localStorage.removeItem('accessToken')
 
         return {};
@@ -23,12 +25,20 @@ export const AuthProvider = ({
     const loginSubmitHandler = async (values) => {
 
         // NEED TRY CATCH BLOCK (ERROR HANDLING) FOR UNREGISTERED USERS(GUESTS)-NOTIFICATION
-        const result = await authService.login(values.email, values.password);
-        setAuth(result);
+        try {
+            const result = await authService.login(values.email, values.password);
 
-        localStorage.setItem('accessToken', result.accessToken);
+            if(result.hasOwnProperty('message')){
+                throw new Error(result.message);
+            }
 
-        navigate(Path.Home);
+            setAuth(result);
+            localStorage.setItem('accessToken', result.accessToken);
+            navigate(Path.Home);
+
+        } catch (error) {
+            alert(error);
+        }
     }
 
     const signupSubmitHandler = async (values) => {
@@ -49,7 +59,7 @@ export const AuthProvider = ({
         loginSubmitHandler,
         signupSubmitHandler,
         logoutHandler,
-        username: auth.username,
+        username: auth.username || auth.email,
         email: auth.email,
         id: auth._id,
         isAuthenticated: !!auth.accessToken,

@@ -1450,7 +1450,7 @@
             "b1217644-a813-4dc9-a437-854ac0fb83e4": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 brandName: "Mercedes",
-                model: "E Class",
+                model: "E-Class",
                 year: "2022",
                 power: "255hps",
                 color: "Silver",

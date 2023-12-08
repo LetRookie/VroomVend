@@ -3,16 +3,11 @@ import { useContext, useEffect, useState } from 'react'
 import * as carService from '../../../services/carService'
 import '../search-box/search.css'
 
-export default function SelectSearchBox({ setSearch, searchVal }) {
+export default function SelectSearchBox({ setSearch, searchValues }) {
 
     const [brandOptions, setBrandOptions] = useState([]);
     const [modelOptions, setModelOptions] = useState([]);
     const [yearOptions, setYearOptions] = useState([]);
-
-    const [brandValue, setBrandValue] = useState('');
-    const [modelValue, setModelValue] = useState('');
-    const [yearValue, setYearValue] = useState('');
-
 
 
     useEffect(() => {
@@ -21,6 +16,15 @@ export default function SelectSearchBox({ setSearch, searchVal }) {
     }, []);
 
     async function onBrandSelect(e) {
+        setSearch({
+            brandName: e.target.value,
+            model: '',
+            year: ''
+        })
+
+        setModelOptions([]);
+        setYearOptions([]);
+
         await carService.getModels(e.target.value)
             .then(result => {
                 setModelOptions(result)
@@ -32,15 +36,16 @@ export default function SelectSearchBox({ setSearch, searchVal }) {
                 setYearOptions(result)
             })
 
-            setSearch({
-                brandName: e.target.value,
-                model: '',
-                year: ''
-            })
-        // console.log('working');
+
     };
 
     async function onModelSelect(e) {
+        setYearOptions([]);
+        
+        // setSearch((oldState) => ({ 
+        //     ...oldState, 
+        //     year: '' 
+        // }))
 
         await carService.getModelYearByModel(e.target.value)
             .then(result => {
@@ -50,6 +55,7 @@ export default function SelectSearchBox({ setSearch, searchVal }) {
                         [e.target.name]: e.target.value
                     }))
             })
+
         // console.log('working');
     };
 
@@ -78,7 +84,7 @@ export default function SelectSearchBox({ setSearch, searchVal }) {
             <div className="formElement" >
                 <label htmlFor="brandName">Choose brand:</label>
                 <select name="brandName" id="brandName" onChange={onBrandSelect}>
-                    <option selected="true"></option>
+                    <option defaultValue={''}></option>
                     {
                         brandOptions.map((brand, index) => {
                             return <option key={index} value={brand.brandName}>{brand.brandName}</option>;
@@ -88,7 +94,7 @@ export default function SelectSearchBox({ setSearch, searchVal }) {
             <div className="formElement" >
                 <label htmlFor="model">Model:</label>
                 <select name="model" id="model" onChange={onModelSelect}>
-                    <option selected="true">{searchVal?.model}</option>
+                    <option defaultValue={''}></option>
                     {
                         modelOptions.map((model, index) => {
                             return <option key={index} value={model.model}>{model.model}</option>;
@@ -98,7 +104,7 @@ export default function SelectSearchBox({ setSearch, searchVal }) {
             <div className="formElement">
                 <label htmlFor="year">Year:</label>
                 <select name="year" id="year" onChange={onYearSelect}>
-                    <option selected="true">{searchVal?.year}</option>
+                    <option defaultValue={''}></option>
                     {
                         yearOptions.map((year, index) => {
                             return <option key={index} value={year.year}>{year.year}</option>;

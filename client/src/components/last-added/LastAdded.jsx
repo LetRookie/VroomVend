@@ -6,6 +6,8 @@ import CarCard from "./car-card/CarCard";
 export default function LastAdded() {
 
   const [lastAdded, setLastAdded] = useState([]);
+  
+
   useEffect(() => {
     carService.getAll()
       .then(result => setLastAdded(result));
@@ -18,7 +20,7 @@ export default function LastAdded() {
 
       <div className="card-list">
         {lastAdded.reverse().slice(0, 3).map(lastCar => (
-          <CarCard key={lastCar._id} {...lastCar} />
+          <CarCard key={lastCar._id} {...lastCar}/>
         ))}
 
         {!lastAdded.length && (

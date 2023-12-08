@@ -13,12 +13,25 @@ export default function Login() {
 
     const { loginSubmitHandler } = useContext(AuthContext);
     
-    const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+    const { values, onChange, onSubmit, errMsg } = useForm(loginSubmitHandler, {
         [loginFormKeys.email]: '',
         [loginFormKeys.password]: '',
-    });
+    }, validation);
 
+    function validation () {
+		
+		let msg = '';
+		
+		 if (!values[loginFormKeys.email]){
+			msg = 'Please enter email!'
+		}else if (!values[loginFormKeys.password]){
+			msg = 'Please enter password!'
+		}
 
+		return msg;
+	}
+
+    
     return (
         <>
             <div id="login-modal" className="login-modal">
@@ -46,6 +59,7 @@ export default function Login() {
                             onChange={onChange}
                             value={values[loginFormKeys.password]}
                         />
+                        <p className="error-msg">{errMsg && `*${errMsg}*`}</p>
 
                         <button type="submit">Login</button>
                         <div className="remember">

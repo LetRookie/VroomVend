@@ -44,7 +44,7 @@ export default function Details() {
     }
 
     return (
-        <>
+        <div style={{'margin': '2rem 0'}}>
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#fff',
@@ -104,7 +104,7 @@ export default function Details() {
                     </div>
                 )}
             </div>
-        </>
+        </div>
     )
 }
 

@@ -16,10 +16,26 @@ export default function Search() {
     const [hasResult, setHasResult] = useState(false);
 
     const onSubmit = (e) => {
-        setFilteredCars([])
         e.preventDefault();
+        let filteredCars = [];
 
-        setFilteredCars(cars.filter(x => x.brandName === search.brandName || x.model === search.model || x.year === search.year))
+        if(search.brandName && !search.model && !search.year) {
+            filteredCars = cars.filter(x => x.brandName === search.brandName)
+        }
+
+        if(search.brandName && search.model && !search.year) {
+            filteredCars = cars.filter(x => x.brandName === search.brandName && x.model === search.model)
+        }
+
+        if(search.brandName && !search.model && search.year) {
+            filteredCars = cars.filter(x => x.brandName === search.brandName && x.year === search.year)
+        }
+
+        if(search.brandName && search.model && search.year) {
+            filteredCars = cars.filter(x => x.brandName === search.brandName && x.model === search.model && x.year === search.year)
+        }
+        
+        setFilteredCars(filteredCars)
         setHasResult(true);
         console.log(search);
     };
@@ -38,7 +54,7 @@ export default function Search() {
         <div className="buy-cars">
             <section className="search">
                 <form className="search-box" onSubmit={onSubmit} >
-                    <SelectSearchBox setSearch={setSearch} searchValues={search} />
+                    <SelectSearchBox setSearch={setSearch} />
                     <input type="submit" value="Search" />
                 </form>
             </section>

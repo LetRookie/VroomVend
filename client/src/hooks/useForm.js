@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function useForm(submitHandler, initialValues, validation) {
 
     const [values, setValues] = useState(initialValues);
-    const [errMsg, setErrMsg] = useState('')
+    const [errMsg, setErrMsg] = useState('');
 
     const onChange = (e) => {
         setValues(oldState => ({
@@ -14,7 +14,7 @@ export default function useForm(submitHandler, initialValues, validation) {
 
     const onSubmit = (e) => {
         e.preventDefault();
-     
+             
         if(validation() === ''){
            submitHandler(values);
         }else{

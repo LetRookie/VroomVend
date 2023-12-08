@@ -21,6 +21,7 @@ export default function Signup() {
 	}, validation)
 
 	function validation (){
+		
 		let msg = '';
 		let emailRgx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}$/gm;
 		let passRgx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/gm;
