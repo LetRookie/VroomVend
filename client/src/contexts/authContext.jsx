@@ -61,7 +61,7 @@ export const AuthProvider = ({
     );
 }
 
-AuthContext.displayName= 'AuthContext';
+AuthContext.displayName = 'AuthContext';
 
 export default AuthContext;
 

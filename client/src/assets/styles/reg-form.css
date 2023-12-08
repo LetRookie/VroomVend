@@ -148,6 +148,11 @@ button {
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1; }
+  
+    .error-msg{
+      color: red;
+      font-weight: 600;
+    }
 
 @-webkit-keyframes hvr-icon-wobble-horizontal {
   16.65% {

@@ -13,13 +13,30 @@ const SignupFormKeys = {
 export default function Signup() {
 
 	const {signupSubmitHandler} = useContext(AuthContext);
-	const {values, onChange, onSubmit} = useForm(signupSubmitHandler, {
+	const {values, onChange, onSubmit, errMsg} = useForm(signupSubmitHandler, {
 		[SignupFormKeys.Username] : '',
 		[SignupFormKeys.Email] : '',
 		[SignupFormKeys.Password] : '',
 		[SignupFormKeys.ConfirmPass] : ''
-	})
- 
+	}, validation)
+
+	function validation (){
+		let msg = '';
+		let emailRgx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}$/gm;
+		let passRgx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/gm;
+
+		if(values[SignupFormKeys.Username].length < 2){
+			msg = 'Username must contain at least 2 characters!'
+		}else if (!values[SignupFormKeys.Email].match(emailRgx)){
+			msg = 'Please enter valid email!'
+		}else if (!values[SignupFormKeys.Password].match(passRgx)){
+			msg = 'Password must contain at least 8 characters (at least one uppercase, lowercase and number)!'
+		}else if (values[SignupFormKeys.Password] !== values[SignupFormKeys.ConfirmPass]){
+			msg = 'Password must be equal'
+		}
+
+		return msg;
+	}
 	return (
 		<div className="wrapper">
 			<div className="inner">
@@ -72,6 +89,7 @@ export default function Signup() {
 						/>
 						<i className="zmdi zmdi-lock"></i>
 					</div>
+					<p className="error-msg">*{errMsg}*</p>
 					<button type="submit">Register
 						<i className="zmdi zmdi-arrow-right"></i>
 					</button>
