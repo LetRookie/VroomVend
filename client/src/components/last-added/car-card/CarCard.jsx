@@ -10,7 +10,7 @@ export default function CarCard({
 
     const navigate = useNavigate();
     return (
-        <div className="card" onClick={() => navigate(`/cars/${_id}`)}>
+        <div key={_id} className="card" onClick={() => navigate(`/cars/${_id}`)}>
             <img
                 src={imageUrl}
                 alt={`${brandName}`} />

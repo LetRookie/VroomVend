@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import {AuthProvider} from "./contexts/authContext";
+import { AuthProvider } from "./contexts/authContext";
 import Path from "./lib/paths";
 import './assets/styles/styles.css';
 
@@ -15,10 +15,11 @@ import Signup from "./components/register/Signup"
 import Details from "./components/details/Details"
 import CarEdit from "./components/car-edit/CarEdit";
 import Pagination from "./components/pagination/Pagination";
+import MyOffers from "./components/header/my-offers/MyOffers";
 
 
 function App() {
-   
+
 
     return (
         <AuthProvider>
@@ -34,6 +35,7 @@ function App() {
                     <Route path={Path.CarEdit} element={<CarEdit />} />
                     <Route path={Path.Logout} element={<Logout />} />
                     <Route path='/pagination' element={<Pagination />} />
+                    <Route path="/my-offers" element={<MyOffers />} />
                 </Routes>
                 <Footer />
             </>
