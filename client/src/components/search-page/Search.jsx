@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 
 import * as carService from '../../services/carService'
-import CarListItem from '../search-page/car-list/CarListItem'
 import SelectSearchBox from "./search-box/SelectSearch";
 import Cars from '../pagination/Cars';
 import PaginationFunc from '../pagination/PaginationFunc';
@@ -53,16 +52,16 @@ export default function Search() {
         }
     };
 
-    const indexOfLastCar = currentPage * carsPerPage; //6 , 12
-    const indexOfFirstCar = indexOfLastCar - carsPerPage; //0, 6
-    const currentCar = cars.slice(indexOfFirstCar, indexOfLastCar);//6 cars
+    const indexOfLastCar = currentPage * carsPerPage;
+    const indexOfFirstCar = indexOfLastCar - carsPerPage;
+    const currentCar = cars.slice(indexOfFirstCar, indexOfLastCar);
 
     //Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     const mapedCars = (c) => {
         return c.map(car =>
-            <Cars key={car._id} {...car} loading={loading} />)
+            <Cars key={car._id} {...car} />)
     }
 
     useEffect(() => {

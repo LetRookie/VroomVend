@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import * as carService from '../../../services/carService'
 import '../search-box/search.css'
 
-export default function SelectSearchBox({ setSearch, searchValues }) {
+export default function SelectSearchBox({ setSearch }) {
 
     const [brandOptions, setBrandOptions] = useState([]);
     const [modelOptions, setModelOptions] = useState([]);
@@ -86,7 +86,7 @@ export default function SelectSearchBox({ setSearch, searchValues }) {
                 <select name="brandName" id="brandName" onChange={onBrandSelect}>
                     <option defaultValue={''}></option>
                     {
-                        brandOptions.map((brand, index) => {
+                        brandOptions.sort((a,b)=>a.brandName.localeCompare(b.brandName)).map((brand, index) => {
                             return <option key={index} value={brand.brandName}>{brand.brandName}</option>;
                         })}
                 </select>
@@ -96,7 +96,7 @@ export default function SelectSearchBox({ setSearch, searchValues }) {
                 <select name="model" id="model" onChange={onModelSelect}>
                     <option defaultValue={''}></option>
                     {
-                        modelOptions.map((model, index) => {
+                        modelOptions.sort((a,b)=>a.model.localeCompare(b.model)).map((model, index) => {
                             return <option key={index} value={model.model}>{model.model}</option>;
                         })}
                 </select>

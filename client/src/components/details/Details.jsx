@@ -28,7 +28,7 @@ export default function Details() {
 
     useEffect(() => {
         carService.getCar(carId)
-            .then(setCar);// validation
+            .then(setCar); // validation 
     }, [carId]);
 
     const isOwner = id === car._ownerId;

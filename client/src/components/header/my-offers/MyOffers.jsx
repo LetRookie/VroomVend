@@ -13,7 +13,6 @@ export default function MyOffers() {
     const [myOffers, setMyOffers] = useState([])
 
     useEffect(() => {
-        const getToken = localStorage.getItem('accessToken');
 
         carService.getAll()
             .then(result => {
@@ -27,13 +26,12 @@ export default function MyOffers() {
     return (
         <>
             <h1>My Offers</h1>
-            {myOffers.map(car =>
+            {myOffers.length ? myOffers.map(car =>
                 <div key={car._id}>
                     <CarCard {...car} />
                     <button onClick={() => navigate(`/cars/${car._id}`)}>Open</button>
                 </div>
-            )}
-
+            ) : <p>You don't have any offers yet</p>}
         </>
     )
 }
