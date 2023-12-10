@@ -93,7 +93,7 @@ export default function Details() {
             </Swiper>
             <div className="details">
                 <h3>{`${car.brandName}-${car.model}-${car.year}`}</h3>
-                <h4>{`${car.power},${car.color}`}</h4>
+                <h4>{`${car.power}  -  ${car.color}`}</h4>
                 <p>{car.subscription}</p>
 
                 {isOwner && (

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    min-height: 50vh;
 }
 .my-offers h1{
     padding-top: 1.5em;
@@ -16,7 +17,7 @@
 }
 .cards-wrapper button{
     width: 100px;
-    height: 50px;
+    height: 30px;
     border-radius: 0;
    transition: width 0.2s ease-in, height 0.2s ease-in, border-radius 0.2s ease-in;
 }
@@ -24,7 +25,7 @@
     border-radius: 1.5em;
     color: #ff6600;
     width: 120px;
-    height: 70px;
+    height: 50px;
 }
 .offers-card {
     padding: 2rem;
@@ -38,4 +39,10 @@
     font-weight: 800;
     font-size: 50px;
     padding: 50px;
+}
+/* .offer-link {
+    margin-bottom: 25px;
+} */
+.offer-link a {
+    color: #ff6600;
 }

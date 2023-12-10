@@ -118,3 +118,49 @@
   height: 100%;
   object-fit: cover;
 }
+
+.details {
+margin: 0 auto;
+  padding: 20px 0;
+  max-width: 500px;
+}
+
+.details h3, .details h4 {
+  font-family: 'Roboto Flex';
+  line-height: 1.7;
+}
+
+.details h3 {
+  font-size: 32px;
+  text-decoration: underline;
+}
+.details h4 {
+  font-size: 24px;
+  color: dimgray;
+}
+.details p {
+  font-size: 18px;
+}
+
+.update-details {
+  border-top: 2px solid #ff6600;
+  margin-top: 20px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 2em;
+}
+
+.update-details button,
+.update-details a {
+  padding:0;
+  margin: 0;
+  width: 100px;
+  height: 30px;
+}
+
+.update-details button:hover,
+.update-details a:hover {
+  opacity: 0.8;
+}

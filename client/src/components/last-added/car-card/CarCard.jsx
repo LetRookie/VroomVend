@@ -15,8 +15,8 @@ export default function CarCard({
                 src={imageUrl}
                 alt={`${brandName}`} />
             <div className="container">
-                <h4><b>{brandName}</b></h4>
-                <p>{`${model} - ${year}`}</p>
+                <h2><b>{brandName}</b></h2>
+                <h4>{`${model} - ${year}`}</h4>
             </div>
         </div>
     )

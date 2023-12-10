@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import * as carService from '../../../services/carService';
 import AuthContext from "../../../contexts/authContext";
@@ -32,7 +32,10 @@ export default function MyOffers() {
                         <CarCard {...car} />
                         <button onClick={() => navigate(`/cars/${car._id}`)}>Open</button>
                     </div>
-            ) : <p>You don't have any offers yet</p>}
+            ) : <div className="no-content">
+                <p>You don't have any offers yet</p>
+                <span className="offer-link">Create an offer <Link to="/sell">here!</Link></span>
+                </div>}
             </div>
         </div>
     )
