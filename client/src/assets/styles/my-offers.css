@@ -1,0 +1,41 @@
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.my-offers h1{
+    padding-top: 1.5em;
+    color: #ff6600;
+    text-align: center;
+    font-weight: 800;
+    font-size: xx-large;
+}
+.cards-wrapper .card {
+    width: 300px;
+}
+.cards-wrapper button{
+    width: 100px;
+    height: 50px;
+    border-radius: 0;
+   transition: width 0.2s ease-in, height 0.2s ease-in, border-radius 0.2s ease-in;
+}
+.cards-wrapper button:hover{
+    border-radius: 1.5em;
+    color: #ff6600;
+    width: 120px;
+    height: 70px;
+}
+.offers-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.cards-wrapper p {
+    font-weight: 800;
+    font-size: 50px;
+    padding: 50px;
+}

@@ -24,14 +24,16 @@ export default function MyOffers() {
     console.log(myOffers);
 
     return (
-        <>
+        <div className="my-offers">
             <h1>My Offers</h1>
+            <div className="cards-wrapper">
             {myOffers.length ? myOffers.map(car =>
-                <div key={car._id}>
-                    <CarCard {...car} />
-                    <button onClick={() => navigate(`/cars/${car._id}`)}>Open</button>
-                </div>
+                    <div key={car._id} className="offers-card">
+                        <CarCard {...car} />
+                        <button onClick={() => navigate(`/cars/${car._id}`)}>Open</button>
+                    </div>
             ) : <p>You don't have any offers yet</p>}
-        </>
+            </div>
+        </div>
     )
 }
