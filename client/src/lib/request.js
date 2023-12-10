@@ -32,10 +32,15 @@ const request = async (method, url, data) => {
     if(response.status === 204){
         return {};
     }
+    
+    if(response.status === 403){
+        throw new Error('Password or mail don\'t match');
+    }
 
     if(!response.ok){
-        throw new Error('Unknonwn error occured');
+        throw new Error('Unknown error ocured');
     }
+
 
     const result = await response.json();
     
