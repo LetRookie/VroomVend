@@ -42,7 +42,7 @@ export default function Details() {
             navigate('/search');
         }
     }
-
+    
     return (
         <div style={{'margin': '2rem 0'}}>
             <Swiper

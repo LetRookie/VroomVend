@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../lib/paths";
@@ -10,16 +10,6 @@ export default function Header() {
         isAuthenticated
     } = useContext(AuthContext)
 
-    // useEffect(() => {
-    //     const handleClose = () => {
-    //         if(show){
-    //             setShow(false);
-    //         }
-    //     }
-
-    //     document.addEventListener('click', handleClose);
-    //     return () => document.removeEventListener('click', handleClose)
-    // }, [])
 
     return (
         <>

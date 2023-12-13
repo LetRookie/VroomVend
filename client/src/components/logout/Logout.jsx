@@ -5,18 +5,21 @@ import * as authService from '../../services/authService';
 import Path from "../../lib/paths";
 import AuthContext from "../../contexts/authContext";
 
-export default function Logout () {
+export default function Logout() {
 
     const navigate = useNavigate()
-    const {logoutHandler} = useContext(AuthContext)
+    const { logoutHandler } = useContext(AuthContext)
 
     useEffect(() => {
         authService.logout()
-        .then(()=> {
-            logoutHandler()
-            navigate(Path.Home)
-        })
-        .catch(() => navigate(Path.Home))
+            .then(() => {
+                logoutHandler()
+                navigate(Path.Home)
+            })
+            .catch(() => {
+                logoutHandler()
+                navigate(Path.Login)
+            })
     }, [])
     return null;
 }

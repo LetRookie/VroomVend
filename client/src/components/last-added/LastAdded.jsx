@@ -20,7 +20,7 @@ export default function LastAdded() {
 
       <div className="card-list">
         {lastAdded.reverse().slice(0, 3).map(lastCar => (
-          <CarCard {...lastCar}/>
+          <CarCard { ...lastCar}/>
         ))}
 
         {!lastAdded.length && (

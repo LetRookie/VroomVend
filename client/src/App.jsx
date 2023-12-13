@@ -14,32 +14,39 @@ import Logout from "./components/logout/Logout";
 import Signup from "./components/register/Signup"
 import Details from "./components/details/Details"
 import CarEdit from "./components/car-edit/CarEdit";
-import Pagination from "./components/pagination/Pagination";
 import MyOffers from "./components/header/my-offers/MyOffers";
+import ErrorBoundary from "./components/ErrorBoundary";
+import AuthGuard from "./components/guards/AuthGuard";
 
 
 function App() {
 
 
     return (
-        <AuthProvider>
-            <>
-                <Header />
-                <Routes>
-                    <Route path={Path.Home} element={<Home />} />
-                    <Route path="/search" element={<Search />} />
-                    <Route path="/sell" element={<SellCar />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/cars/:carId" element={<Details />} />
-                    <Route path={Path.CarEdit} element={<CarEdit />} />
-                    <Route path={Path.Logout} element={<Logout />} />
-                    <Route path='/pagination' element={<Pagination />} />
-                    <Route path="/my-offers" element={<MyOffers />} />
-                </Routes>
-                <Footer />
-            </>
-        </AuthProvider>
+        <ErrorBoundary>
+            <AuthProvider>
+                <>
+                    <Header />
+                    <Routes>
+                        {/* visible routes */}
+                        <Route path={Path.Home} element={<Home />} />
+                        <Route path={Path.Search} element={<Search />} />
+                        <Route path={Path.Login} element={<Login />} />
+                        <Route path={Path.Signup} element={<Signup />} />
+
+                        {/* protected routes */}
+                        <Route element={<AuthGuard />}>
+                            <Route path={Path.SellCar} element={<SellCar />} />
+                            <Route path={Path.Details} element={<Details />} />
+                            <Route path={Path.CarEdit} element={<CarEdit />} />
+                            <Route path={Path.Logout} element={<Logout />} />
+                            <Route path={Path.MyOffers} element={<MyOffers />} />
+                        </Route>
+                    </Routes>
+                    <Footer />
+                </>
+            </AuthProvider>
+        </ErrorBoundary>
     )
 }
 
